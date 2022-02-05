@@ -1,5 +1,5 @@
 {
-  "name": "voicevox",
+  "name": "voicevox-api-client",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "packageManager": "yarn@3.1.0",
