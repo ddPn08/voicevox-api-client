@@ -1,7 +1,6 @@
-import { fetch } from '../fetch'
-import { OtherClient } from './Other'
-import { QueryClient } from './Query'
-import { VoiceClient } from './Voice'
+import { OtherClient } from './other.js'
+import { QueryClient } from './query.js'
+import { VoiceClient } from './voice.js'
 
 export class Client {
     public readonly url: URL
@@ -13,8 +12,17 @@ export class Client {
         this.url = new URL(url)
     }
 
+    private async loadFetcher(): Promise<typeof window.fetch> {
+        if (typeof document === 'undefined') {
+            return (await import('node-fetch')).default as any
+        } else {
+            return window.fetch
+        }
+    }
+
     public async request(pathname: string, init?: RequestInit, method: 'GET' | 'POST' = 'POST') {
         const url = new URL(pathname, this.url)
+        const fetch = await this.loadFetcher()
         const res = await fetch(url.href, {
             method: method,
             headers: {

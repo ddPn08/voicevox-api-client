@@ -1,15 +1,44 @@
 {
   "name": "voicevox-api-client",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "version": "1.0.0",
-  "packageManager": "yarn@3.1.0",
+  "main": "./src/index.ts",
+  "version": "1.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs && tsc --emitDeclarationOnly --declarationDir dist/types"
+  },
   "devDependencies": {
-    "@types/node-fetch": "~2",
-    "ts-node": "^10.4.0",
-    "typescript": "^4.5.5"
+    "@tsconfig/node16-strictest-esm": "^1.0.1",
+    "@types/node": "^17.0.34",
+    "esbuild": "^0.14.39",
+    "tiny-glob": "^0.2.9",
+    "typescript": "4.8.0-dev.20220518"
   },
   "dependencies": {
-    "node-fetch": "~2"
-  }
+    "node-fetch": "^3.2.4"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "./dist/cjs/index.cjs",
+    "module": "./dist/esm/index.mjs",
+    "types": "./dist/types/index.d.ts"
+  },
+  "keywords": [
+    "voicevox"
+  ],
+  "files": [
+    "dist"
+  ],
+  "author": {
+    "name": "ddpn08",
+    "url": "https://me.ddpn.world"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddPn08/voicevox-api-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ddPn08/voicevox-api-client/issues"
+  },
+  "homepage": "https://github.com/ddPn08/voicevox-api-client#readme",
+  "license": "MIT"
 }

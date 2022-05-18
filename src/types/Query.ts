@@ -1,4 +1,4 @@
-import { Mora } from '.'
+import type { Mora } from './index.js'
 
 export type Query = {
     accent_phrases: {

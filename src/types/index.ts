@@ -1,5 +1,5 @@
-export * from './Query'
-export * from './Other'
+export * from './query.js'
+export * from './other.js'
 
 export type Mora = {
     text: string

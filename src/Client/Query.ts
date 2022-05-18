@@ -1,5 +1,5 @@
-import { Client } from '.'
-import { Mora, Query } from '../types'
+import type { Client } from './index.js'
+import type { Mora, Query } from '../types/index.js'
 
 export class QueryClient {
     constructor(private readonly client: Client) {}

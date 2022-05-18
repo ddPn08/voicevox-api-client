@@ -1,5 +1,5 @@
-import { Client } from '.'
-import { Query } from '../types'
+import type { Client } from './index.js'
+import type { Query } from '../types/index.js'
 
 export class VoiceClient {
     constructor(private readonly client: Client) {}

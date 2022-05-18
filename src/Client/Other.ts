@@ -1,5 +1,5 @@
-import { Client } from '.'
-import { Preset, SpeakerData, SpeakerInfo } from '../types'
+import type { Client } from './index.js'
+import type { Preset, SpeakerData, SpeakerInfo } from '../types/index.js'
 
 export class OtherClient {
     constructor(private readonly client: Client) {}
