@@ -19,7 +19,7 @@ export type SpeakerData = {
         name: string
         id: number
     }[]
-}[]
+}
 
 export type SpeakerInfo = {
     policy: string

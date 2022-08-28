@@ -4,7 +4,9 @@
     "lib": [
       "DOM"
     ],
-    "module": "NodeNext",
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "node",
     "declaration": true
   },
   "include": [

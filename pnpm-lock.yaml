@@ -6,7 +6,7 @@ specifiers:
   esbuild: ^0.14.39
   node-fetch: ^3.2.4
   tiny-glob: ^0.2.9
-  typescript: 4.8.0-dev.20220518
+  typescript: ^4.6.4
 
 dependencies:
   node-fetch: 3.2.4
@@ -16,7 +16,7 @@ devDependencies:
   '@types/node': 17.0.34
   esbuild: 0.14.39
   tiny-glob: 0.2.9
-  typescript: 4.8.0-dev.20220518
+  typescript: 4.6.4
 
 packages:
 
@@ -285,8 +285,8 @@ packages:
       globrex: 0.1.2
     dev: true
 
-  /typescript/4.8.0-dev.20220518:
-    resolution: {integrity: sha512-yczRLiowXD4THxpe2DrClYXsmIRt9VPDft1dat4Le50mQwuUcmvdqD43o4hmlbNP7HpyeEYX51KXozGq1s7zlw==}
+  /typescript/4.6.4:
+    resolution: {integrity: sha512-9ia/jWHIEbo49HfjrLGfKbZSuWo9iTMwXO+Ca3pRsSpbsMbc7/IU8NKdCZVRRBafVPGnoJeFL76ZOAA84I9fEg==}
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true

@@ -21,7 +21,7 @@ export class OtherClient {
         return await res.text()
     }
 
-    public async getSpeakers(): Promise<SpeakerData> {
+    public async getSpeakers(): Promise<SpeakerData[]> {
         const res = await this.client.request('/speakers', {}, 'GET')
         return await res.json()
     }
